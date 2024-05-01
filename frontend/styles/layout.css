@@ -188,3 +188,10 @@ vaadin-button:hover {
 	border: 3px solid #A9A9A9;
 	border-radius: 6px;
  }
+ 
+ /* GRIDS */
+ .default-grid {
+ 	border: 3px solid #A9A9A9;
+	border-radius: 6px;
+	box-shadow: 5px 10px grey;
+ }

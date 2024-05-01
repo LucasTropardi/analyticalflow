@@ -29,6 +29,7 @@ public abstract class GenericGrid<T, ID, C extends GenericController<T, ID, ?>> 
         setPadding(true);
 
         grid = new Grid<>(entityClass, false);
+        grid.addClassName("default-grid");
         grid.setSelectionMode(Grid.SelectionMode.MULTI);
 
         refreshList();
