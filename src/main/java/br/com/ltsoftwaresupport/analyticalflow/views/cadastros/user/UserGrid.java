@@ -13,7 +13,7 @@ import br.com.ltsoftwaresupport.analyticalflow.model.User;
 import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericGrid;
 
-@Route(value = "users", layout = MainLayout.class)
+@Route(value = "logado/users", layout = MainLayout.class)
 @PageTitle("Users | GameRating")
 @RolesAllowed("ADMIN")
 public class UserGrid extends GenericGrid<User, String, UserController>{	
@@ -21,7 +21,7 @@ public class UserGrid extends GenericGrid<User, String, UserController>{
 	public UserGrid(@Autowired UserController userController) throws DefaultException {
 		super(userController, User.class, User::getUsername);
 		setTitle("Users");
-		setRotaForm("user");
+		setRotaForm("logado/user");
 		configurarGrid();
     }
 

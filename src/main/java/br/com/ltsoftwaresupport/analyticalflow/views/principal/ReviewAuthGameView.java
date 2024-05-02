@@ -38,7 +38,7 @@ import br.com.ltsoftwaresupport.analyticalflow.security.SecurityService;
 import br.com.ltsoftwaresupport.analyticalflow.service.StateStorageService;
 import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 
-@Route(value = "logado/reviews", layout = MainLayout.class)
+@Route(value = "logado/auth-reviews", layout = MainLayout.class)
 @PageTitle("Game Reviews")
 @RolesAllowed({"ADMIN", "USER"})
 public class ReviewAuthGameView extends VerticalLayout {

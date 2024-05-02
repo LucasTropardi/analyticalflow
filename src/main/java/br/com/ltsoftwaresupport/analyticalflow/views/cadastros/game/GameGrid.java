@@ -22,7 +22,7 @@ import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericGrid;
 
 @Route(value = "games", layout = MainLayout.class)
-@PageTitle("Games | GameRating")
+@PageTitle("Games")
 @RolesAllowed("ADMIN")
 public class GameGrid extends GenericGrid<Game, Long, GameController> {
 	

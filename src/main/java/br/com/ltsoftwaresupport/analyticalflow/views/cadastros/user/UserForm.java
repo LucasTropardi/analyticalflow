@@ -35,7 +35,7 @@ import br.com.ltsoftwaresupport.analyticalflow.model.User;
 import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericForm;
 
-@Route(value = "user", layout = MainLayout.class)
+@Route(value = "logado/user", layout = MainLayout.class)
 @PageTitle("Users | GameRating")
 @AnonymousAllowed
 public class UserForm extends GenericForm<User, String, UserController> implements HasUrlParameter<String> {
@@ -78,7 +78,7 @@ public class UserForm extends GenericForm<User, String, UserController> implemen
 		super(User.class, userController, new User());
 		
 		setTitle("Users");
-		setSuccessRoute("users");
+		setSuccessRoute("logado/users");
 
 		txtUsername = new TextField("Usuário");
 		txtName = new TextField("Nome");

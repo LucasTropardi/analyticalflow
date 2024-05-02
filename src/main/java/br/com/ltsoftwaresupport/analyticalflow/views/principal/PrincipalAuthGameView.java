@@ -171,7 +171,7 @@ public class PrincipalAuthGameView  extends VerticalLayout {
     
     private void navigateToReviews(Long gameId) {
         stateStorageService.setGameId(gameId);
-        getUI().ifPresent(ui -> ui.navigate("logado/reviews"));
+        getUI().ifPresent(ui -> ui.navigate("logado/auth-reviews"));
     }
 
 }

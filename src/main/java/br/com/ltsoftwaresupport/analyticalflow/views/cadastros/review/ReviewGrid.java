@@ -17,8 +17,8 @@ import br.com.ltsoftwaresupport.analyticalflow.security.SecurityService;
 import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericGrid;
 
-@Route(value = "admin/reviews", layout = MainLayout.class)
-@PageTitle("Reviews | GameRating")
+@Route(value = "logado/reviews", layout = MainLayout.class)
+@PageTitle("Reviews")
 @PermitAll
 public class ReviewGrid extends GenericGrid<GameReview, Long, ReviewController> {
 	
@@ -26,7 +26,7 @@ public class ReviewGrid extends GenericGrid<GameReview, Long, ReviewController> 
 	public ReviewGrid(@Autowired ReviewController reviewController, @Autowired SecurityService securityService) throws DefaultException {
 		super(reviewController, GameReview.class, GameReview::getId);
 		setTitle("Reviews");
-		setRotaForm("admin/review");
+		setRotaForm("logado/review");
 		configurarGrid();
 		
 		if (securityService.getCurrentUser().get().getRole().equals(Role.USER)) {

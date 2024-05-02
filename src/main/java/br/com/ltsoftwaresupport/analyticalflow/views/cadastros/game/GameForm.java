@@ -39,7 +39,7 @@ import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericForm;
 
 @Route(value = "game", layout = MainLayout.class)
-@PageTitle("Games | GameRating")
+@PageTitle("Game")
 @RolesAllowed("ADMIN")
 public class GameForm extends GenericForm<Game, Long, GameController> implements HasUrlParameter<Long> {
 
@@ -81,7 +81,7 @@ public class GameForm extends GenericForm<Game, Long, GameController> implements
 		super(Game.class, gameController, new Game());
 		
 		setTitle("Games");
-		setSuccessRoute("games");
+		setSuccessRoute("logado/games");
 		
 		this.gameController = gameController;
 		this.publisherController = publisherController;		

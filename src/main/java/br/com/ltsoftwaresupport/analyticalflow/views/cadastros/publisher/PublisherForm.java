@@ -20,9 +20,9 @@ import br.com.ltsoftwaresupport.analyticalflow.model.Publisher;
 import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericForm;
 
-@Route(value = "publisher", layout = MainLayout.class)
-@PageTitle("Publishers | GameRating")
-@RolesAllowed("ADMIN")
+@Route(value = "logado/publisher", layout = MainLayout.class)
+@PageTitle("Editoras")
+@RolesAllowed({"ADMIN"})
 public class PublisherForm extends GenericForm<Publisher, Long, PublisherController> implements HasUrlParameter<Long>  {
 	
 	TextField txtName;
@@ -35,7 +35,7 @@ public class PublisherForm extends GenericForm<Publisher, Long, PublisherControl
 		super(Publisher.class, publisherController, new Publisher());
 		
 		setTitle("Publisher");
-		setSuccessRoute("publishers");
+		setSuccessRoute("logado/publishers");
 		
 		txtName = new TextField("Nome");
 		txtWebsite = new TextField("Website");

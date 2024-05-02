@@ -13,9 +13,9 @@ import br.com.ltsoftwaresupport.analyticalflow.model.Publisher;
 import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericGrid;
 
-@Route(value = "publishers", layout = MainLayout.class)
-@PageTitle("Publishers | GameRating")
-@RolesAllowed("ADMIN")
+@Route(value = "logado/publishers", layout = MainLayout.class)
+@PageTitle("Editora")
+@RolesAllowed({"ADMIN"})
 public class PublisherGrid  extends GenericGrid<Publisher, Long, PublisherController>{
 
 	

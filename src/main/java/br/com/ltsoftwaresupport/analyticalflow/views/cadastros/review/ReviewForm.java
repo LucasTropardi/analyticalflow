@@ -30,8 +30,8 @@ import br.com.ltsoftwaresupport.analyticalflow.model.User;
 import br.com.ltsoftwaresupport.analyticalflow.views.layout.MainLayout;
 import br.com.ltsoftwaresupport.analyticalflow.views.utils.GenericForm;
 
-@Route(value = "admin/review", layout = MainLayout.class)
-@PageTitle("Reviews | GameRating")
+@Route(value = "logado/review", layout = MainLayout.class)
+@PageTitle("Review")
 @PermitAll
 public class ReviewForm extends GenericForm<GameReview, Long, ReviewController> implements HasUrlParameter<Long> {
 
@@ -65,7 +65,7 @@ public class ReviewForm extends GenericForm<GameReview, Long, ReviewController> 
 	public ReviewForm(@Autowired ReviewController reviewController, @Autowired GameController gameController, @Autowired UserController userController) throws DefaultException {
 		super(GameReview.class, reviewController, new GameReview());
 		setTitle("Review");
-		setSuccessRoute("logado");
+		setSuccessRoute("logado/reviews");
 		this.reviewController = reviewController;	
 		this.gameController = gameController;
 		this.userController = userController;

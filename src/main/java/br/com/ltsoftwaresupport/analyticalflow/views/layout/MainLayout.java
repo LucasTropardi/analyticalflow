@@ -82,7 +82,7 @@ public class MainLayout extends AppLayout {
             .set("padding-right", "3px")
             .set("width", "34px");
         btnUserEdit.getElement().setAttribute("title", "Meus dados");
-        btnUserEdit.addClickListener(event -> getUI().ifPresent(ui -> ui.navigate("user/" + user.getUsername())));
+        btnUserEdit.addClickListener(event -> getUI().ifPresent(ui -> ui.navigate("logado/user/" + user.getUsername())));
 
         navbarContainer.add(logo, tabs, btnUserEdit, btnLogoutImage);
         addToNavbar(navbarContainer);
@@ -127,7 +127,7 @@ public class MainLayout extends AppLayout {
                 createTab("Reviews", ReviewGrid.class));
     
         if (isAdmin) {
-            tabs.add(createTab("Games", GameGrid.class),
+            tabs.add(createTab("Jogos", GameGrid.class),
                     createTab("Editoras", PublisherGrid.class),
                     createTab("Usuários", UserGrid.class));
         }
